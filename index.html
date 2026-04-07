@@ -3,239 +3,378 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal de Ventas DirecTV</title>
+  <title>VentaMax DirecTV | Portal de Ventas</title>
+  <meta
+    name="description"
+    content="Portal interactivo para agentes de ventas de DirecTV. Capacitación, argumentos de venta, objeciones, promociones y herramientas útiles en un solo lugar."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="bg-deco">
-    <span class="blob blob-1"></span>
-    <span class="blob blob-2"></span>
-    <span class="blob blob-3"></span>
-    <span class="zigzag zigzag-1"></span>
-    <span class="ring ring-1"></span>
-    <span class="dot-grid dot-grid-1"></span>
+  <div class="bg-shapes">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+    <span class="shape shape-4"></span>
   </div>
 
-  <header class="hero" id="inicio">
-    <nav class="navbar">
-      <div class="logo">VENTAS<span>TV</span></div>
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="logo">
+        <span class="logo-badge">TV</span>
+        <span class="logo-text">VentaMax <strong>DirecTV</strong></span>
+      </a>
 
-      <button class="menu-toggle" id="menuToggle">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#planes">Planes</a></li>
-        <li><a href="#guion">Guion</a></li>
-        <li><a href="#objeciones">Objeciones</a></li>
-        <li><a href="#cierre">Cierre</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero-content container">
-      <div class="hero-left">
-        <span class="label-pill">Portal para agentes</span>
-        <h1>
-          Vender puede ser
-          <span>rápido, visual</span>
-          y divertido
-        </h1>
-        <p>
-          Una mini web onepage para capacitar agentes de ventas de DirecTV,
-          consultar guiones, revisar objeciones y acceder a herramientas
-          rápidas para cerrar más ventas.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#planes" class="btn btn-pink">Ver planes</a>
-          <a href="#guion" class="btn btn-yellow">Abrir guion</a>
-        </div>
-
-        <div class="hero-mini-cards">
-          <div class="mini-card">
-            <strong>+ Claridad</strong>
-            <span>Todo en una sola vista</span>
-          </div>
-          <div class="mini-card">
-            <strong>+ Ventas</strong>
-            <span>Respuestas rápidas</span>
-          </div>
-          <div class="mini-card">
-            <strong>+ Energía</strong>
-            <span>Diseño moderno y pop</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="tv-card bounce">
-          <div class="tv-top">
-            <span class="tv-dot pink"></span>
-            <span class="tv-dot yellow"></span>
-            <span class="tv-dot blue"></span>
-          </div>
-
-          <div class="tv-screen">
-            <div class="screen-badge">HOY</div>
-            <h3>Promo destacada</h3>
-            <p>Mostrá beneficios, detectá necesidad y cerrá con seguridad.</p>
-            <button class="screen-btn" id="randomTipBtn">Dame un tip</button>
-          </div>
-        </div>
-      </div>
-    </section>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="#capacitacion">Capacitación</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#objeciones">Objeciones</a>
+        <a href="#promos">Promos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="section container" id="planes">
-      <div class="section-heading">
-        <span class="section-tag">Planes</span>
-        <h2>Qué podés ofrecer</h2>
-        <p>Presentá opciones simples según presupuesto, necesidad y perfil del cliente.</p>
-      </div>
-
-      <div class="plans-grid">
-        <article class="plan-card pink-card">
-          <div class="plan-icon">📺</div>
-          <h3>Plan Básico</h3>
-          <p>Ideal para clientes que buscan una opción simple y accesible.</p>
-          <button
-            class="detail-btn"
-            data-title="Plan Básico"
-            data-text="Recomendado para clientes que priorizan precio y canales esenciales. Es ideal como primera propuesta de entrada."
-          >
-            Ver detalle
-          </button>
-        </article>
-
-        <article class="plan-card yellow-card">
-          <div class="plan-icon">⭐</div>
-          <h3>Plan Full</h3>
-          <p>Más variedad, mejor experiencia y una propuesta más completa.</p>
-          <button
-            class="detail-btn"
-            data-title="Plan Full"
-            data-text="Perfecto para hogares que quieren más entretenimiento, mejor variedad de contenido y una propuesta más atractiva."
-          >
-            Ver detalle
-          </button>
-        </article>
-
-        <article class="plan-card blue-card">
-          <div class="plan-icon">🚀</div>
-          <h3>Premium</h3>
-          <p>La experiencia más completa para clientes que quieren todo.</p>
-          <button
-            class="detail-btn"
-            data-title="Premium"
-            data-text="Ideal para clientes que valoran contenido exclusivo, una experiencia superior y mayor percepción de valor."
-          >
-            Ver detalle
-          </button>
-        </article>
-      </div>
-    </section>
-
-    <section class="section alt-section" id="guion">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-tag">Guion</span>
-          <h2>Cómo empezar la conversación</h2>
-          <p>Usá una apertura amigable, clara y enfocada en el valor.</p>
-        </div>
-
-        <div class="script-panel">
-          <div class="script-sticker">Guion rápido</div>
-          <p id="scriptText">
-            Hola, ¿cómo estás? Te contacto porque tenemos una propuesta muy buena
-            de entretenimiento para tu hogar, con opciones que se adaptan a lo
-            que buscás y promos activas para aprovechar.
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="tag">Portal interactivo para vendedores</span>
+          <h1>
+            Vendé mejor con una web
+            <span class="highlight">moderna, divertida y útil</span>
+          </h1>
+          <p>
+            Un espacio pensado para agentes de ventas de DirecTV con guías rápidas,
+            respuestas a objeciones, argumentos de cierre, promociones y ayudas
+            visuales para vender con más seguridad.
           </p>
-          <button class="btn btn-pink" id="changeScript">Cambiar guion</button>
+
+          <div class="hero-actions">
+            <a href="#herramientas" class="btn btn-primary">Ver herramientas</a>
+            <a href="#capacitacion" class="btn btn-secondary">Empezar capacitación</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>+10</strong>
+              <span>bloques útiles</span>
+            </div>
+            <div class="stat-card">
+              <strong>100%</strong>
+              <span>en una sola página</span>
+            </div>
+            <div class="stat-card">
+              <strong>Fácil</strong>
+              <span>para nuevos y expertos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="tv-card floating">
+            <div class="tv-top">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="tv-screen">
+              <div class="screen-badge">DASHBOARD</div>
+              <h3>Asistente de ventas</h3>
+              <ul>
+                <li>Argumentos rápidos</li>
+                <li>Objeciones comunes</li>
+                <li>Promos destacadas</li>
+                <li>Tips de cierre</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sticker sticker-star">TOP</div>
+          <div class="sticker sticker-pop">WOW!</div>
         </div>
       </div>
     </section>
 
-    <section class="section container" id="objeciones">
-      <div class="section-heading">
-        <span class="section-tag">Objeciones</span>
-        <h2>Qué responder</h2>
-        <p>Resolvé dudas sin frenar la conversación.</p>
-      </div>
-
-      <div class="accordion-box">
-        <div class="accordion-item">
-          <button class="accordion-header">“Ahora no tengo tiempo”</button>
-          <div class="accordion-content">
-            <p>
-              Te entiendo. Te lo resumo en pocos segundos y, si te interesa,
-              lo dejamos encaminado para el mejor momento.
-            </p>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header">“Me parece caro”</button>
-          <div class="accordion-content">
-            <p>
-              Hay distintas alternativas y promociones para que puedas elegir
-              una opción que encaje mejor con tu presupuesto.
-            </p>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header">“Lo tengo que pensar”</button>
-          <div class="accordion-content">
-            <p>
-              Perfecto, pero antes te resumo por qué puede convenirte para que
-              tomes la decisión con toda la información clara.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt-section" id="cierre">
+    <section class="section" id="capacitacion">
       <div class="container">
-        <div class="section-heading">
-          <span class="section-tag">Cierre</span>
-          <h2>Frases para cerrar mejor</h2>
-          <p>Terminá con una pregunta concreta o con una propuesta directa.</p>
-        </div>
-
-        <div class="close-grid">
-          <div class="tip-card">🎯 Escuchá la necesidad real del cliente.</div>
-          <div class="tip-card">⚡ Ofrecé beneficios antes que características.</div>
-          <div class="tip-card">💬 Hablá claro, corto y con energía.</div>
-          <div class="tip-card">🤝 Cerrá con una acción concreta.</div>
-        </div>
-
-        <div class="closing-panel">
-          <h3>Frase de cierre sugerida</h3>
-          <p id="closingText">
-            Si te parece, avanzamos ahora y te dejo activada la opción que mejor
-            te conviene para aprovechar la promo disponible.
+        <div class="section-head">
+          <span class="tag">Capacitación</span>
+          <h2>Todo lo que necesita saber un agente</h2>
+          <p>
+            Material rápido para consultar en medio de una venta o durante el entrenamiento.
           </p>
-          <button class="btn btn-yellow" id="changeClosing">Ver otra frase</button>
+        </div>
+
+        <div class="cards-grid three">
+          <article class="info-card">
+            <div class="card-icon">📺</div>
+            <h3>Producto</h3>
+            <p>
+              Explicación simple del servicio, beneficios, instalación, contenido y valor agregado.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <div class="card-icon">💬</div>
+            <h3>Speech de venta</h3>
+            <p>
+              Estructura recomendada para iniciar conversación, detectar necesidad y cerrar mejor.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <div class="card-icon">🎯</div>
+            <h3>Perfil del cliente</h3>
+            <p>
+              Qué ofrecer según si el cliente busca deporte, entretenimiento, ahorro o facilidad.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="herramientas">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Herramientas</span>
+          <h2>Funciones pensadas para ayudar a vender</h2>
+          <p>
+            Bloques interactivos simples para asistir al vendedor en tiempo real.
+          </p>
+        </div>
+
+        <div class="tool-layout">
+          <div class="tool-card">
+            <h3>Buscador rápido</h3>
+            <p>Escribí una palabra clave y encontrá una respuesta sugerida.</p>
+
+            <div class="search-box">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Ej: instalación, fútbol, precio, promo..."
+              />
+              <button class="btn btn-primary" id="searchBtn">Buscar</button>
+            </div>
+
+            <div class="result-box" id="searchResult">
+              Escribí una palabra clave para ver una ayuda rápida.
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <h3>Tip del día</h3>
+            <p>Consejos cortos para mejorar el cierre y generar confianza.</p>
+
+            <div class="tip-box" id="tipBox">
+              Sonreír mientras hablás mejora el tono y transmite seguridad.
+            </div>
+
+            <button class="btn btn-secondary" id="newTipBtn">Otro tip</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="objeciones">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Objeciones</span>
+          <h2>Respuestas listas para usar</h2>
+          <p>
+            Frases claras y amigables para responder dudas comunes sin sonar robótico.
+          </p>
+        </div>
+
+        <div class="accordion">
+          <article class="accordion-item active">
+            <button class="accordion-header">
+              <span>“Lo voy a pensar”</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                Totalmente, es importante decidir bien. Antes de cortar, le resumo en 20 segundos
+                por qué hoy puede ser una buena oportunidad y usted me dice si le sirve.
+              </p>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-header">
+              <span>“Me parece caro”</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                Entiendo. Por eso lo comparo con lo que recibe: entretenimiento, deportes,
+                comodidad y una opción pensada para usar todos los días en casa.
+              </p>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-header">
+              <span>“No lo necesito ahora”</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                Perfecto. Justamente mi idea es dejarle una propuesta clara y simple para que vea
+                si este es el momento ideal para aprovechar una promoción.
+              </p>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-header">
+              <span>“Ya tengo otro servicio”</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>
+                Claro, y por eso vale la pena comparar. Muchas veces el cliente descubre una mejor
+                experiencia, más contenido o una propuesta que se adapta mejor a su uso real.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="promos">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Promociones</span>
+          <h2>Espacio para destacar ofertas vigentes</h2>
+          <p>
+            Este bloque está pensado para actualizar promos o campañas destacadas.
+          </p>
+        </div>
+
+        <div class="promo-banner">
+          <div class="promo-text">
+            <span class="promo-label">PROMO DESTACADA</span>
+            <h3>Instalación + beneficio especial</h3>
+            <p>
+              Usá este sector para cargar promos, bonificaciones, descuentos temporales
+              o beneficios por tiempo limitado.
+            </p>
+          </div>
+          <div class="promo-badge">🔥</div>
+        </div>
+
+        <div class="cards-grid three">
+          <article class="mini-card">
+            <h4>Promo 1</h4>
+            <p>Descripción breve de la promoción actual.</p>
+          </article>
+
+          <article class="mini-card">
+            <h4>Promo 2</h4>
+            <p>Ideal para destacar combos o ventajas temporales.</p>
+          </article>
+
+          <article class="mini-card">
+            <h4>Promo 3</h4>
+            <p>También puede usarse para campañas regionales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">FAQ</span>
+          <h2>Preguntas frecuentes</h2>
+          <p>
+            Respuestas rápidas para dudas recurrentes de agentes y clientes.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>¿Sirve para capacitación?</h3>
+            <p>
+              Sí. La idea es que funcione como una mini wiki visual para enseñar y repasar.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>¿Se puede personalizar?</h3>
+            <p>
+              Sí. Se pueden cambiar colores, bloques, textos, imágenes y herramientas.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>¿Se pueden agregar imágenes?</h3>
+            <p>
+              Sí. Podés sumar banners, capturas, personajes, promos o material de apoyo.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>¿Se puede subir a GitHub?</h3>
+            <p>
+              Sí. Esta estructura está pensada para subirla fácil como proyecto estático.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-box">
+        <div>
+          <span class="tag">Contacto interno</span>
+          <h2>¿Necesitás actualizar algo del portal?</h2>
+          <p>
+            Este sector puede usarse para dejar datos del supervisor, capacitador o referente
+            del equipo de ventas.
+          </p>
+        </div>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <span>Supervisor</span>
+            <strong>Nombre del referente</strong>
+          </div>
+          <div class="contact-card">
+            <span>Email</span>
+            <strong>equipo@empresa.com</strong>
+          </div>
+          <div class="contact-card">
+            <span>Canal</span>
+            <strong>Soporte interno / RRHH / Ventas</strong>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Portal de Ventas DirecTV · diseño retro pop onepage</p>
-  </footer>
-
-  <div class="modal" id="modal">
-    <div class="modal-card">
-      <button class="close-modal" id="closeModal">✕</button>
-      <h3 id="modalTitle">Detalle</h3>
-      <p id="modalText">Texto del detalle</p>
+    <div class="container footer-content">
+      <p>© 2026 VentaMax DirecTV. Portal interno para capacitación y soporte comercial.</p>
+      <a href="#inicio" class="back-top">Volver arriba ↑</a>
     </div>
-  </div>
-
-  <div class="toast" id="toast">Tip cargado</div>
+  </footer>
 
   <script src="js/app.js"></script>
 </body>
-</html>
+        </html>
